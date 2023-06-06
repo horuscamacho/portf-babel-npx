@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portf-babel-npx/static/css/main.805d037a.css",
-    "main.js": "/portf-babel-npx/static/js/main.3820856e.js",
+    "main.js": "/portf-babel-npx/static/js/main.e9657012.js",
     "static/js/787.99c96e47.chunk.js": "/portf-babel-npx/static/js/787.99c96e47.chunk.js",
     "static/media/logo_color.svg": "/portf-babel-npx/static/media/logo_color.acd33e83486447081da1ec0dfd5bef6c.svg",
     "static/media/avatar.svg": "/portf-babel-npx/static/media/avatar.6c607b331ec1e2bcf5f7fa050b2bf5b0.svg",
     "static/media/logo.svg": "/portf-babel-npx/static/media/logo.1eac511ed92271fa296f45b0bc0f047a.svg",
     "static/media/logo_black.svg": "/portf-babel-npx/static/media/logo_black.234e4f821a3505e3eb4788faf9dda21e.svg",
     "static/media/github.svg": "/portf-babel-npx/static/media/github.ebd452bf402237ef25876cdcac686676.svg",
-    "static/media/cv.svg": "/portf-babel-npx/static/media/cv.9c27b0f1bcba76268710a4f9aae9440b.svg",
+    "static/media/cv.svg": "/portf-babel-npx/static/media/cv.f89e5618691705ac4990f8a18010f03f.svg",
     "static/media/twitter.svg": "/portf-babel-npx/static/media/twitter.0407223bb7bca83e1349f743cc8849a2.svg",
     "index.html": "/portf-babel-npx/index.html",
     "static/media/arrowright.svg": "/portf-babel-npx/static/media/arrowright.5fb51f86bdf68a027b470ec40851873b.svg",
@@ -17,11 +17,11 @@
     "static/media/close.svg": "/portf-babel-npx/static/media/close.e7eb3f5e81e9c9dfeaf952446eea455a.svg",
     "static/media/hamburger.svg": "/portf-babel-npx/static/media/hamburger.1849f0d4e85173eada2572d7b5967199.svg",
     "main.805d037a.css.map": "/portf-babel-npx/static/css/main.805d037a.css.map",
-    "main.3820856e.js.map": "/portf-babel-npx/static/js/main.3820856e.js.map",
+    "main.e9657012.js.map": "/portf-babel-npx/static/js/main.e9657012.js.map",
     "787.99c96e47.chunk.js.map": "/portf-babel-npx/static/js/787.99c96e47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.805d037a.css",
-    "static/js/main.3820856e.js"
+    "static/js/main.e9657012.js"
   ]
 }
