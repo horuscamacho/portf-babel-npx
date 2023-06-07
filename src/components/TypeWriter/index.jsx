@@ -1,16 +1,24 @@
 import {useTypeWriter} from "./useTypeWriter.js";
 import {useEffect} from "react";
+import {useWindowSize} from "@uidotdev/usehooks";
 
-export function TypeWriter({children}) {
-    const {text, typeWriter } = useTypeWriter(children);
+export function TypeWriter({ paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, children }) {
+    const {width} = useWindowSize();
+
+    const {text, typeWriter,  styles } = useTypeWriter( paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, width );
 
     useEffect(() => {
         typeWriter(children)
-    }, [])
-
+        // eslint-disable-next-line
+    }, [children])
     return(
-        <>
-            <p className="text-lg text-blue-700">{text}<span className="animate-fade animate-infinite animate-duration-[800ms] animate-ease-linear">_</span></p>
-        </>
+        <div style={styles.div}>
+            <p style={styles.p}>
+                {text}
+                <span className="animate-fade animate-infinite animate-duration-[800ms] animate-ease-linear">
+                    _
+                </span>
+            </p>
+        </div>
     )
 }

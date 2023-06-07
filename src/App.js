@@ -12,46 +12,66 @@ import {TwitterIcon} from "./components/Icons/Social/TwitterIcon";
 import {YoutubeIcon} from "./components/Icons/Social/YoutubeIcon";
 import {LinkedInIcon} from "./components/Icons/Social/LinkedInIcon";
 import {GithubIcon} from "./components/Icons/Social/GithubIcon";
-import {WhiteLogo} from "./components/Logo/WhiteLogo";
+import {HeroTitle} from "./components/HeroTitle";
+import {TypeWriter} from "./components/TypeWriter";
+import {CVLink} from "./components/TextUrl/CVLink";
+import {HeroImage} from "./components/HeroImage";
+import { useWindowSize } from "@uidotdev/usehooks";
+import {NavBar} from "./components/NavBar";
 
 function App() {
     const { open, closing, menu, toggleMenu } = useNavBar();
 
+    const size = useWindowSize();
 
 
   return (
-      <>
-          <div className="lg:hidden">
-              <MobileNav>
-                  <BlackLogo width={125} />
-                  <HamburgerIcon width={24} color={"#2D3539"} onClick={toggleMenu} />
-              </MobileNav>
-              {open &&
-                  <MenuMobile closing={closing}>
-                      <Header onClick={toggleMenu}/>
-                      <Body>
-                          <MenuList menu={menu} />
-                      </Body>
-                      <Footer>
-                          <TwitterIcon width={24} color={"#FFF"} />
-                          <YoutubeIcon width={24} color={"#FFF"} />
-                          <LinkedInIcon width={24} color={"#FFF"} />
-                          <GithubIcon width={24} color={"#FFF"} />
-                      </Footer>
-                  </MenuMobile>
-              }
-          </div>
-          <header style={{height: '116px'}} className="hidden  w-full lg:flex justify-center">
-              <div style={{maxWidth: '1200px', borderBottom: '1px solid var(--yellow)', paddingTop: '42px'}} className="w-full h-full flex justify-between">
-                  <WhiteLogo width={150} />
-                  <nav>
-                      <ul className="flex">
-                          {menu.map((item, index) => <li className="text-nav text-white mx-5 hover:animate-wiggle hover:animate-duration-300 hover:animate-normal hover:text-yellow hover:underline hover:cursor-pointer" key={index}>{item.name}</li>)}
-                      </ul>
-                  </nav>
-              </div>
-          </header>
-      </>
+          <main  className="flex flex-col  items-center ">
+
+                  <MobileNav>
+                      <BlackLogo width={125} />
+                      <HamburgerIcon width={24} color={"#2D3539"} onClick={toggleMenu} />
+                  </MobileNav>
+                  {open &&
+                      <MenuMobile closing={closing}>
+                          <Header onClick={toggleMenu}/>
+                          <Body>
+                              <MenuList menu={menu} />
+                          </Body>
+                          <Footer>
+                              <TwitterIcon width={24} color={"#FFF"} />
+                              <YoutubeIcon width={24} color={"#FFF"} />
+                              <LinkedInIcon width={24} color={"#FFF"} />
+                              <GithubIcon width={24} color={"#FFF"} />
+                          </Footer>
+                      </MenuMobile>
+                  }
+                  <NavBar menu={menu} />
+              <HeroTitle width={size.width} />
+
+                  <TypeWriter width={size.width} color={"white"} height={"100"}>
+                      Mi nombre es Horus Sinhue Camacho, soy desarrollador web Full Stack, me especializo en el desarrollo
+                      de aplicaciones web con ReactJS y NodeJS, pero también tengo experiencia en el desarrollo de
+                      aplicaciones con Angular. Actualmente cuento más de 3 años de experiencia en el desarrollo.
+                  </TypeWriter>
+
+
+                  <div className="mt-11">
+                      <CVLink fontSize={size.width < 400 ? "13.5px" : size.width > 400 ? "18px" : "18px" } iconSize={size.width < 400 ? "16" : size.width > 400 ? "24" : "24"} >
+                          Descargar CV
+                      </CVLink>
+                  </div>
+                  <div className="mt-10 flex justify-center">
+                      {size.width < 400 && <HeroImage width={"200"} size={"240px"} bottom={"-10px"}/>}
+                      {size.width > 400 && <HeroImage width={"350"} size={"370px"} bottom={"-10px"}/>}
+                  </div>
+
+
+
+
+
+          </main>
+
 
   );
 }

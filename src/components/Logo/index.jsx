@@ -9,8 +9,8 @@ const logoTypes = {
 }
 export function Logo({type, width}){
     return (
-        <span>
+        <>
             {logoTypes[type](width)}
-        </span>
+        </>
     )
 }
