@@ -1,4 +1,4 @@
-import {CloseIcon} from "../../Icons/CloseIcon";
+import {CloseIcon} from "../../../Icons/CloseIcon";
 
 export function Header({onClick}) {
     return (

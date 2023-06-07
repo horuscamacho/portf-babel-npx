@@ -1,15 +1,12 @@
 import {useHeroTitle} from "./useHeroTitle";
 import {useWindowSize} from "@uidotdev/usehooks";
-export function HeroTitle({fontSize, padding}){
+export function HeroTitle({fontSize, paddingX, paddingY, marginX, marginY,}){
     const {width} = useWindowSize();
-    const {styles} = useHeroTitle(padding, padding, padding, padding, width, fontSize);
-
-
-
+    const {styles} = useHeroTitle(paddingX, paddingY, marginX, marginY, width, fontSize);
 
     return (
         <>
-            <div style={styles.div}  className="leading-none mt-10 font-bold w-full">
+            <div style={styles.div}  className="leading-none font-bold">
                 <p className="text-white">¡Hola y bienvenido </p>
                 <p className="text-yellow underline">  a este espacio! </p>
             </div>

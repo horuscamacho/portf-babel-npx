@@ -1,4 +1,4 @@
-import {WhiteLogo} from "../Logo/WhiteLogo";
+import {WhiteLogo} from "../../Logo/WhiteLogo";
 
 export function NavBar({menu}){
     return(

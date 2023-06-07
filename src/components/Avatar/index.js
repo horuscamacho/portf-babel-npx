@@ -6,8 +6,8 @@ const avatarTypes = {
 
 export function Avatar({ width, type }) {
     return (
-        <span>
+        <>
             {avatarTypes[type](width)}
-        </span>
+        </>
     )
 }

@@ -8,8 +8,8 @@ const linkType= {
 
 export function TextUrl({type, width}){
     return(
-        <span>
+        <>
             {linkType[type](width)}
-        </span>
+        </>
     )
 }
