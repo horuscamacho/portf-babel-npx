@@ -1,8 +1,8 @@
 import {useHeroTitle} from "./useHeroTitle";
 import {useWindowSize} from "@uidotdev/usehooks";
-export function HeroTitle({fontSize, paddingX, paddingY, marginX, marginY,}){
+export function HeroTitle({fontSize, paddingX, paddingY, marginX, marginY, marginTop, marginBottom}){
     const {width} = useWindowSize();
-    const {styles} = useHeroTitle(paddingX, paddingY, marginX, marginY, width, fontSize);
+    const {styles} = useHeroTitle(paddingX, paddingY, marginX, marginY, width, fontSize, marginTop, marginBottom);
 
     return (
         <>

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export const useTextUrl = (paddingX, paddingY, marginX, marginY, fontSize,  color, width) => {
+export const useTextUrl = (paddingX, paddingY, marginX, marginY, fontSize,   width) => {
     const [styles, setStyles] = useState({});
 
     useEffect(() => {
@@ -32,12 +32,13 @@ export const useTextUrl = (paddingX, paddingY, marginX, marginY, fontSize,  colo
                     marginBlock: divMarginBlock,
                     marginInline: divMarginInline,
                     fontSize: divFontSize,
-                    color: color
+                    display: 'flex',
+                    color: '#fff',
                 }
             })
         };
         updateStyles()
-    }, [width, color, paddingY, marginX, marginY, fontSize]);
+    }, [width, paddingY, marginX, marginY, fontSize, paddingX]);
 
     return {
         styles

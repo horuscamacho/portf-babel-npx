@@ -4,10 +4,10 @@ export const useHeroTitle = (paddingX, paddingY, marginX, marginY, width, fontSi
 
     useEffect(() => {
         const updateStyles = () => {
-            let divPaddingInline = paddingX ? paddingX :'46px';
-            let divPaddingBlock = paddingY ? paddingY : '36px';
-            let divMarginBlock = marginY ? marginY : '36px';
-            let divMarginInline = marginX ? marginX : '46px';
+            let divPaddingInline = paddingX ? paddingX :'0px';
+            let divPaddingBlock = paddingY ? paddingY : '0px';
+            let divMarginBlock = marginY ? marginY : '0px';
+            let divMarginInline = marginX ? marginX : '0px';
             let divFontSize = fontSize ? fontSize : '64px';
             let divMarginTop = marginTop ? marginTop : '0px';
             let divMarginBottom = marginBottom ? marginBottom : '0px';
@@ -18,7 +18,7 @@ export const useHeroTitle = (paddingX, paddingY, marginX, marginY, width, fontSi
                 divMarginBlock = marginY ? `${marginY}px` : '24px';
                 divMarginInline = marginX ? `${marginX}px` : '16px';
                 divFontSize = fontSize ? `${fontSize}px` : '36px';
-                divMarginTop = marginTop ? `${marginTop}px` : '16px';
+                divMarginTop = marginTop ? `${marginTop}px` : '80px';
                 divMarginBottom = marginBottom ? `${marginBottom}px` : '24px';
             } else if (width && width < 800) {
                 divPaddingInline = paddingX ? `${paddingX}px` : '46px';
@@ -26,7 +26,7 @@ export const useHeroTitle = (paddingX, paddingY, marginX, marginY, width, fontSi
                 divMarginBlock = marginY ? `${marginY}px` : '36px';
                 divMarginInline = marginX ? `${marginX}px` : '46px';
                 divFontSize = fontSize ? `${fontSize}px` : '64px';
-                divMarginTop = marginTop ? `${marginTop}px` : '42px';
+                divMarginTop = marginTop ? `${marginTop}px` : '106px';
                 divMarginBottom = marginBottom ? `${marginBottom}px` : '24px';
             }
 
@@ -44,7 +44,7 @@ export const useHeroTitle = (paddingX, paddingY, marginX, marginY, width, fontSi
         };
 
         updateStyles();
-    },[ paddingX, paddingY, marginX, marginY, width, fontSize]);
+    },[ paddingX, paddingY, marginX, marginY, width, fontSize, marginBottom, marginTop]);
 
     return {
         styles
