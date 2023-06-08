@@ -1,49 +1,49 @@
 import './index.css';
 import {useNavBar} from "./components/Navigation/MobileNav/useNavBar";
-/*import {HeroTitle} from "./components/HeroTitle";
-import {TypeWriter} from "./components/TypeWriter";
-import {CVLink} from "./components/TextUrl/CVLink";
-import {HeroImage} from "./components/HeroImage";
-import { useWindowSize } from "@uidotdev/usehooks";*/
 import {Navigation} from "./components/Navigation";
 import {Hero} from "./pages/Hero";
+import {Restrictions} from "./components/Restrictions";
+import {useOrientation, useWindowScroll} from "@uidotdev/usehooks";
+import {useEffect, useState} from "react";
+import {HardData} from "./components/HardData";
 
 function App() {
+
+    const [{ y }] = useWindowScroll();
+    const [opacity, setOpacity] = useState(1);
+    const {angle} = useOrientation();
     const { open, closing, menu, toggleMenu } = useNavBar();
 
-    //const size = useWindowSize();
 
+    useEffect(() => {
+        setOpacity(.99 - ( y / 100 ));
+    }, [y]);
 
   return (
-          <main  className="flex flex-col  items-center ">
 
+      <>
+          <main style={{height: '1000px', position: 'relative'}} className="flex flex-col items-center ">
 
-              <Navigation open={open} closing={closing} menu={menu} toggleMenu={toggleMenu} />
-            {/*  <HeroTitle />
+                      <span style={{position: 'fixed', zIndex: 1, width: '100%'}}>
+                          <Navigation open={open} closing={closing} menu={menu} toggleMenu={toggleMenu} />
+                      </span>
 
-                  <TypeWriter width={size.width} color={"white"} height={"100"}>
-                      Mi nombre es Horus Sinhue Camacho, soy desarrollador web Full Stack, me especializo en el desarrollo
-                      de aplicaciones web con ReactJS y NodeJS, pero también tengo experiencia en el desarrollo de
-                      aplicaciones con Angular. Actualmente cuento más de 3 años de experiencia en el desarrollo.
-                  </TypeWriter>
-
-
-
-                      <CVLink iconSize={13.5}>
-                          Descargar CV
-                      </CVLink>
-
-                  <div className="mt-10 flex justify-center">
-                     <HeroImage bottom={-10} />
-                  </div>
-*/}
-
-              <Hero />
-
+              <span style={{opacity: opacity, width: "100%"}} className="flex justify-center" >
+                  <Hero />
+              </span>
 
 
 
           </main>
+
+          <HardData  />
+
+
+          <Restrictions turned={angle > 0}>
+              Para disfrutar de una mejor experiencia, por favor, gira tu dispositivo.
+          </Restrictions>
+      </>
+
 
 
   );

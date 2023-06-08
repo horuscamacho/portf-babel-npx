@@ -2,10 +2,10 @@ import {useTypeWriter} from "./useTypeWriter.js";
 import {useEffect} from "react";
 import {useWindowSize} from "@uidotdev/usehooks";
 
-export function TypeWriter({ paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, children }) {
+export function TypeWriter({ paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, children, widthSize, marginTop, marginBottom }) {
     const {width} = useWindowSize();
 
-    const {text, typeWriter,  styles } = useTypeWriter( paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, width );
+    const {text, typeWriter,  styles } = useTypeWriter( paddingX, paddingY, marginX, marginY, fontSize, lineHeight, height, color, width, widthSize, marginTop, marginBottom );
 
     useEffect(() => {
         typeWriter(children)
