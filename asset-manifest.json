@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portf-babel-npx/static/css/main.2511bf9a.css",
-    "main.js": "/portf-babel-npx/static/js/main.57f22d02.js",
+    "main.js": "/portf-babel-npx/static/js/main.9e0de320.js",
     "static/js/787.99c96e47.chunk.js": "/portf-babel-npx/static/js/787.99c96e47.chunk.js",
     "static/media/logo_color.svg": "/portf-babel-npx/static/media/logo_color.acd33e83486447081da1ec0dfd5bef6c.svg",
     "static/media/avatar.svg": "/portf-babel-npx/static/media/avatar.6c607b331ec1e2bcf5f7fa050b2bf5b0.svg",
@@ -17,11 +17,11 @@
     "static/media/close.svg": "/portf-babel-npx/static/media/close.e7eb3f5e81e9c9dfeaf952446eea455a.svg",
     "static/media/hamburger.svg": "/portf-babel-npx/static/media/hamburger.1849f0d4e85173eada2572d7b5967199.svg",
     "main.2511bf9a.css.map": "/portf-babel-npx/static/css/main.2511bf9a.css.map",
-    "main.57f22d02.js.map": "/portf-babel-npx/static/js/main.57f22d02.js.map",
+    "main.9e0de320.js.map": "/portf-babel-npx/static/js/main.9e0de320.js.map",
     "787.99c96e47.chunk.js.map": "/portf-babel-npx/static/js/787.99c96e47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2511bf9a.css",
-    "static/js/main.57f22d02.js"
+    "static/js/main.9e0de320.js"
   ]
 }
